@@ -8,48 +8,49 @@ from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 import plotly.express as px
 
+# Title and description
+st.title('AI-Driven Media Investment Plan')
+st.sidebar.title("Navigation")
+
 # Custom CSS for background and images
 st.markdown(
     """
     <style>
-    /* Set the background color to a gradient */
+    /* Background Gradient */
     body {
-        background: linear-gradient(to right, #ff7e5f, #feb47b);
+        background: linear-gradient(135deg, #FFEFBA, #FFFFFF);
     }
-    
-    /* Position the NetElixir image at the top left */
-    .netelixir {
+
+    /* Top Left Image */
+    .top-left {
         position: absolute;
         top: 10px;
         left: 10px;
-        width: 150px;
+        width: 120px;
+        height: auto;
     }
-    
-    /* Position the Mercer Mettl image at the top right */
-    .mettl {
+
+    /* Top Right Image */
+    .top-right {
         position: absolute;
         top: 10px;
         right: 10px;
-        width: 150px;
+        width: 120px;
+        height: auto;
     }
-    
-    /* Set the padding for the main content to avoid overlap */
-    .main > div {
-        padding-top: 80px;
-    }
-    
     </style>
     """,
     unsafe_allow_html=True
 )
 
-# Add the images to the Streamlit app
-st.markdown('<img src="netelixir.png" class="netelixir">', unsafe_allow_html=True)
-st.markdown('<img src="mettl.png" class="mettl">', unsafe_allow_html=True)
-
-# Title and description
-st.title('AI-Driven Media Investment Plan')
-st.sidebar.title("Navigation")
+# Display Images in the corners
+st.markdown(
+    """
+    <img src="https://path_to_your_image/logo1.png" class="top-left">
+    <img src="https://path_to_your_image/logo2.png" class="top-right">
+    """,
+    unsafe_allow_html=True
+)
 
 # Sidebar for Navigation
 page = st.sidebar.selectbox("Choose a section", ["Upload Data", "Data Exploration", "Model Training", "Results"])
