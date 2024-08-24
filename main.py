@@ -1,3 +1,5 @@
+!pip install scikit-learn
+
 import streamlit as st
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -56,3 +58,4 @@ if uploaded_file is not None:
         st.write("### Prediction vs Actual")
         comparison = pd.DataFrame({"Actual": y_test, "Predicted": y_pred})
         st.line_chart(comparison)
+
