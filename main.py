@@ -8,6 +8,45 @@ from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 import plotly.express as px
 
+# Custom CSS for background and images
+st.markdown(
+    """
+    <style>
+    /* Set the background color to a gradient */
+    body {
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+    }
+    
+    /* Position the NetElixir image at the top left */
+    .netelixir {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 150px;
+    }
+    
+    /* Position the Mercer Mettl image at the top right */
+    .mettl {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 150px;
+    }
+    
+    /* Set the padding for the main content to avoid overlap */
+    .main > div {
+        padding-top: 80px;
+    }
+    
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Add the images to the Streamlit app
+st.markdown('<img src="netelixir.png" class="netelixir">', unsafe_allow_html=True)
+st.markdown('<img src="mettl.png" class="mettl">', unsafe_allow_html=True)
+
 # Title and description
 st.title('AI-Driven Media Investment Plan')
 st.sidebar.title("Navigation")
