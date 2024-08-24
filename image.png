@@ -1,2 +1,4 @@
+mkdir images
+
 mv logo1.png images/
 mv logo2.png images/
