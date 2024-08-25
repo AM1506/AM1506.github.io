@@ -8,6 +8,41 @@ from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 import plotly.express as px
 
+# Custom CSS for background color and font color
+st.markdown(
+    """
+    <style>
+    /* Background Color */
+    body {
+        background-color: #f0f2f6; /* Light gray background */
+    }
+
+    /* Font Color */
+    h1, h2, h3, h4, h5, h6, p {
+        color: #333333; /* Dark gray text */
+    }
+
+    /* Sidebar Background Color and Font Color */
+    .sidebar .sidebar-content {
+        background-color: #ffffff; /* White background for sidebar */
+        color: #333333; /* Dark gray text for sidebar */
+    }
+
+    /* Input Text Color */
+    input, textarea, select {
+        color: #333333; /* Dark gray text for inputs */
+    }
+
+    /* Button Style */
+    button {
+        background-color: #4CAF50; /* Green button background */
+        color: white; /* White button text */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Title and description
 st.title('AI-Driven Media Investment Plan')
 st.sidebar.title("Navigation")
